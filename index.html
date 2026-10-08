@@ -450,18 +450,37 @@ footer{background:#010101!important;color:#4F4C47!important;border-top-color:#15
 #customer-reviews .review-card{flex:0 0 min(86vw,360px);scroll-snap-align:start;}
 #service-charges .card p strong{color:#D7B95A;font-size:21px;}
 </style>
+
+<style id="premium-upgrade">
+.section-kicker{text-align:center;color:#B8922E;font-size:11px;font-weight:800;letter-spacing:1.2px;margin-bottom:8px}
+.section-sub{text-align:center;color:#8F8B82;margin:-15px auto 25px}
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:760px;margin:auto;background:#080808;border:1px solid #242424;padding:20px;border-radius:20px}
+.booking-form input,.booking-form select{width:100%;background:#0D0D0D;color:#E7E2D4;border:1px solid #292929;border-radius:12px;padding:14px;font-size:14px;outline:none}
+.booking-form input:focus,.booking-form select:focus{border-color:#B8922E}
+.booking-btn{grid-column:1/-1;border:0!important;width:100%;cursor:pointer}
+.trust-grid,.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust-badge,.process-card{background:linear-gradient(145deg,#0D0D0D,#050505);border:1px solid #242424;border-radius:18px;padding:20px;box-shadow:0 10px 25px rgba(0,0,0,.35)}
+.trust-badge b{display:block;color:#C9A94F;margin-bottom:8px}.trust-badge span,.process-card p{display:block;color:#8F8B82;font-size:13px}
+.process-grid{grid-template-columns:repeat(3,1fr)}
+.process-card span{display:inline-block;color:#D7B95A;font-size:12px;font-weight:900;border:1px solid #5e4918;border-radius:999px;padding:5px 9px;margin-bottom:12px}.process-card h3{color:#C9A94F;margin-bottom:7px}
+.area-list{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}.area-list span{border:1px solid #2a2a2a;background:#0b0b0b;color:#B8B09A;padding:9px 13px;border-radius:999px;font-size:13px}
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.brand-grid div{background:#0B0B0B;border:1px solid #282828;border-radius:14px;padding:18px;text-align:center;color:#D7B95A;font-weight:800;letter-spacing:.5px}
+.location-card{text-align:center;background:#0a0a0a;border:1px solid #252525;border-radius:20px;padding:20px}.location-card p{margin:5px}.location-card iframe{width:100%;height:300px;border:0;border-radius:15px;margin-top:15px;filter:grayscale(.25) contrast(1.05)}
+@media(max-width:700px){.booking-form{grid-template-columns:1fr}.booking-btn{grid-column:1}.trust-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr}.brand-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.trust-grid{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
 
 <header class="hero">
   <div class="hero-badge">✓ TRUSTED HOME APPLIANCE SERVICE • KOLKATA</div>
-  <div class="logo">REHAN_<span>REPAIRING</span>_CENTER</div>
+  <div class="logo">Rehan <span>Repairing</span> Center</div>
   <p class="tagline">Professional Home Appliance Repair Service in Kolkata</p>
   <p class="services-line">AC • Refrigerator • Washing Machine • Microwave</p>
 
   <div class="hero-actions">
-    <a class="btn call" href="tel:7449972364">📞 CALL NOW</a>
+    <a class="btn call" href="tel:+917449972364">📞 CALL NOW</a>
     <a class="btn whatsapp" href="https://wa.me/917449972364?text=Hello%20REHAN_REPAIRING_CENTER,%20I%20need%20a%20repair%20service.">💬 WHATSAPP</a>
   </div>
 
@@ -515,6 +534,72 @@ Microwave servicing and repair for common heating and operational problems.
 
 </section>
 
+
+
+<section id="booking">
+  <div class="section-kicker">⚡ QUICK SERVICE BOOKING</div>
+  <h2>Book a Technician</h2>
+  <p class="section-sub">Tell us what you need and we'll connect with you on WhatsApp.</p>
+  <form class="booking-form" id="bookingForm">
+    <input id="bookName" type="text" placeholder="Your Name" required>
+    <input id="bookPhone" type="tel" inputmode="numeric" placeholder="Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+    <select id="bookAppliance" required>
+      <option value="">Select Appliance</option><option>AC</option><option>Refrigerator / Fridge</option><option>Washing Machine</option><option>Microwave</option>
+    </select>
+    <select id="bookTime" required>
+      <option value="">Preferred Time</option><option>Morning (9 AM–12 PM)</option><option>Afternoon (12 PM–3 PM)</option><option>Evening (3 PM–7 PM)</option><option>Anytime</option>
+    </select>
+    <button class="btn booking-btn" type="submit">🔧 BOOK TECHNICIAN</button>
+  </form>
+</section>
+
+<section id="trust">
+  <div class="section-kicker">🛡️ SERVICE PROMISE</div>
+  <h2>Why Customers Choose Us</h2>
+  <div class="trust-grid">
+    <div class="trust-badge"><b>🛡️ 90 Days Service Warranty</b><span>Warranty on applicable repaired/replaced parts and repair work.</span></div>
+    <div class="trust-badge"><b>⚡ Same-Day Fast Doorstep Visit</b><span>Fast home-service response across selected Kolkata areas.</span></div>
+    <div class="trust-badge"><b>👨‍🔧 Professional Technicians</b><span>Experienced appliance repair technicians.</span></div>
+    <div class="trust-badge"><b>💵 No Hidden Charges</b><span>Charges are explained clearly before repair work.</span></div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="section-kicker">📋 SIMPLE PROCESS</div>
+  <h2>How It Works</h2>
+  <div class="process-grid">
+    <div class="process-card"><span>01</span><h3>Book a Service</h3><p>Call, WhatsApp or use the booking form.</p></div>
+    <div class="process-card"><span>02</span><h3>Doorstep Visit</h3><p>Technician visits your home as quickly as available, typically within 60–90 minutes in nearby service areas.</p></div>
+    <div class="process-card"><span>03</span><h3>Transparent Repair</h3><p>Repair is explained clearly, with applicable 90-day warranty.</p></div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="section-kicker">📍 KOLKATA SERVICE AREAS</div>
+  <h2>Areas We Serve</h2>
+  <div class="area-list">
+    <span>Topsia</span><span>Park Circus</span><span>Tiljala</span><span>Ballygunge</span><span>EM Bypass</span><span>Salt Lake</span><span>New Town</span><span>Kasba</span><span>Garia</span><span>Jadavpur</span><span>Behala</span><span>Entally</span><span>Sealdah</span><span>Central Kolkata</span><span>South Kolkata</span><span>East Kolkata</span>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="section-kicker">🏷️ BRANDS WE SERVICE</div>
+  <h2>Brands We Service</h2>
+  <div class="brand-grid">
+    <div>LG</div><div>Samsung</div><div>Daikin</div><div>Voltas</div><div>Godrej</div><div>Whirlpool</div><div>Lloyd</div><div>Blue Star</div><div>Carrier</div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="section-kicker">📍 OUR LOCATION</div>
+  <h2>Visit / Service Location</h2>
+  <div class="location-card">
+    <p><strong>85Z/1D Topsia Road, Kolkata 700039</strong></p>
+    <p>Home service available across selected Kolkata areas.</p>
+    <a class="btn maps" href="https://www.google.com/maps/search/?api=1&query=85Z%2F1D%20Topsia%20Road%2C%20Kolkata%20700039" target="_blank" rel="noopener">📍 OPEN IN GOOGLE MAPS</a>
+    <iframe title="REHAN_REPAIRING_CENTER Kolkata location map" src="https://www.google.com/maps?q=85Z%2F1D%20Topsia%20Road%2C%20Kolkata%20700039&output=embed" loading="lazy" allowfullscreen></iframe>
+  </div>
+</section>
 
 <section id="service-charges">
 <h2>💰 Service Charges & Warranty</h2>
@@ -684,7 +769,7 @@ Kolkata 700039
 
 <br>
 
-<a class="btn call" href="tel:7449972364">
+<a class="btn call" href="tel:+917449972364">
 📞 Call Now
 </a>
 
@@ -725,7 +810,7 @@ AC • Refrigerator • Washing Machine • Microwave Repair | Kolkata
 <div class="sticky">
 
 <a class="sticky-call"
-href="tel:7449972364">
+href="tel:+917449972364">
 📞 CALL
 </a>
 
@@ -736,6 +821,15 @@ href="https://wa.me/917449972364?text=Hello%20REHAN_REPAIRING_CENTER,%20I%20need
 
 </div>
 
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const n=document.getElementById('bookName').value.trim(), p=document.getElementById('bookPhone').value.trim(), a=document.getElementById('bookAppliance').value, t=document.getElementById('bookTime').value;
+ const msg=encodeURIComponent('Hello REHAN_REPAIRING_CENTER, I want to book a technician.%0AName: '+n+'%0AMobile: '+p+'%0AAppliance: '+a+'%0APreferred Time: '+t);
+ window.location.href='https://wa.me/917449972364?text='+msg;
+});
+</script>
 </body>
 </html>
 
