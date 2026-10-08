@@ -274,36 +274,175 @@ padding-bottom:65px;
 }
 
 }
+
+/* PREMIUM REDESIGN */
+:root{
+  --gold:#f5c451;
+  --gold2:#ffe08a;
+  --panel:#111;
+  --panel2:#171717;
+  --line:#292929;
+}
+body{
+  background:
+    radial-gradient(circle at 50% -10%,rgba(245,196,81,.10),transparent 32%),
+    #070707;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+header.hero{
+  position:relative;
+  overflow:hidden;
+  padding:30px 18px 28px;
+  min-height:520px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 50% 15%,rgba(245,196,81,.15),transparent 28%),
+    linear-gradient(180deg,#151515 0%,#080808 72%);
+  border-bottom:1px solid #252525;
+}
+header.hero:before{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  border:1px solid rgba(245,196,81,.14);
+  border-radius:50%;
+  top:-170px;right:-80px;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  border:1px solid rgba(245,196,81,.35);
+  border-radius:999px;
+  color:var(--gold2);
+  background:rgba(245,196,81,.06);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.7px;
+  margin-bottom:20px;
+}
+.logo{
+  font-size:clamp(27px,8vw,46px);
+  line-height:1.05;
+  letter-spacing:-1px;
+  text-shadow:0 8px 30px rgba(0,0,0,.6);
+}
+.logo span{color:var(--gold);}
+.tagline{
+  max-width:620px;
+  color:#f2f2f2;
+  font-size:clamp(17px,4.5vw,22px);
+  font-weight:650;
+  margin:15px 0 7px;
+}
+.services-line{color:#a9a9a9;font-size:14px;}
+.hero-actions{margin-top:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:5px;}
+.btn{
+  padding:14px 22px;
+  border-radius:14px;
+  margin:6px 2px;
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+}
+.call{background:#fff;color:#080808;}
+.whatsapp{background:#20c866;}
+.btn:hover{transform:translateY(-3px);}
+.hero-trust{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  width:min(620px,100%);
+  margin-top:28px;
+  border:1px solid #292929;
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(255,255,255,.025);
+  backdrop-filter:blur(8px);
+}
+.hero-trust div{
+  padding:15px 8px;
+  text-align:center;
+  border-right:1px solid #292929;
+}
+.hero-trust div:last-child{border-right:0;}
+.hero-trust strong{display:block;font-size:19px;color:var(--gold2);}
+.hero-trust small{display:block;color:#929292;font-size:11px;margin-top:3px;}
+section{max-width:1080px;padding:58px 18px;}
+h2{
+  font-size:clamp(23px,5vw,31px);
+  letter-spacing:-.4px;
+  margin-bottom:28px;
+}
+.services,.why{gap:18px;}
+.card{
+  background:linear-gradient(145deg,#171717,#0f0f0f);
+  border:1px solid #292929;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 14px 35px rgba(0,0,0,.25);
+  transition:transform .25s,border-color .25s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(245,196,81,.35);}
+.card h3{font-size:20px;}
+.card p{color:#aaa;}
+.icon{font-size:34px;}
+.gallery{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px;
+}
+.gallery img{
+  height:280px;
+  border-radius:18px;
+  border:1px solid #292929;
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
+  transition:transform .25s,filter .25s;
+}
+.gallery img:hover{transform:scale(1.015);filter:brightness(1.08);}
+.gallery-note{color:#777;}
+.contact{
+  background:linear-gradient(145deg,#181818,#0d0d0d);
+  border:1px solid #292929;
+  padding:32px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.3);
+}
+.contact p{color:#c8c8c8;}
+.address{color:#aaa;}
+.review-box{border-color:#292929;}
+footer{border-top:1px solid #1b1b1b;padding-bottom:85px;}
+.sticky{bottom:12px;}
+.sticky a{box-shadow:0 8px 24px rgba(0,0,0,.45);padding:13px 5px;}
+@media(max-width:600px){
+  header.hero{min-height:500px;padding:26px 15px 24px;}
+  .hero-badge{font-size:9px;letter-spacing:.45px;}
+  .hero-actions{width:100%;}
+  .hero-actions .btn{flex:1;min-width:145px;}
+  .hero-trust{margin-top:23px;}
+  .gallery img{height:210px;}
+  section{padding:45px 15px;}
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="hero">
+  <div class="hero-badge">✓ TRUSTED HOME APPLIANCE SERVICE • KOLKATA</div>
+  <div class="logo">REHAN_<span>REPAIRING</span>_CENTER</div>
+  <p class="tagline">Professional Home Appliance Repair Service in Kolkata</p>
+  <p class="services-line">AC • Refrigerator • Washing Machine • Microwave</p>
 
-<div class="logo">
-REHAN_REPAIRING_CENTER
-</div>
+  <div class="hero-actions">
+    <a class="btn call" href="tel:7449972364">📞 CALL NOW</a>
+    <a class="btn whatsapp" href="https://wa.me/917449972364?text=Hello%20REHAN_REPAIRING_CENTER,%20I%20need%20a%20repair%20service.">💬 WHATSAPP</a>
+  </div>
 
-<p class="tagline">
-Professional Home Appliance Repair Service in Kolkata
-</p>
-
-<p class="services-line">
-❄️ AC • 🧊 Refrigerator • 🧺 Washing Machine • 🍽️ Microwave
-</p>
-
-<br>
-
-<a class="btn call" href="tel:7449972364">
-📞 CALL NOW
-</a>
-
-<a class="btn whatsapp"
-href="https://wa.me/917449972364?text=Hello%20REHAN_REPAIRING_CENTER,%20I%20need%20a%20repair%20service.">
-💬 WHATSAPP
-</a>
-
+  <div class="hero-trust">
+    <div><strong>5.0★</strong><small>Google Rating</small></div>
+    <div><strong>24+</strong><small>Reviews</small></div>
+    <div><strong>4</strong><small>Appliance Services</small></div>
+  </div>
 </header>
 
 
@@ -367,7 +506,7 @@ Microwave servicing and repair for common heating and operational problems.
 </div>
 
 <p class="gallery-note">
-More repair work photos will be added soon.
+Real repair work • AC • Refrigerator • Washing Machine • Microwave
 </p>
 
 </section>
@@ -1509,4 +1648,3 @@ href="https://wa.me/917449972364?text=Hello%20REHAN_REPAIRING_CENTER,%20I%20need
 </body>
 </html>
 
-<!-- GitHub write-access test: Codex Connector connected -->
